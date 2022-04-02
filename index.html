@@ -29,9 +29,7 @@
         <h1>About Me</h1>
         <p class="bio-text">
           I am a full stack web developer with a passion for creating beautiful
-          and functional websites. I have a background in graphic design and a
-          love for creating beautiful and functional websites. I am currently
-          looking for a position in the web development industry.
+          and functional websites. 
         </p>
       </div>
     </section>
@@ -103,73 +101,64 @@
     </section>
 
     <section class="projects" id="projects">
-      <h2 class="project-title">Recent Projects</h2>
+      <h2 class="projects-title"> Recent Projects</h2>
       <div class="projects-container">
-        <div class="project-container project-card">
-          <img src="./assets/images/expenseTracker.png" " alt=""
-          class="project-pic" class/>
-          <h3 class="project-title">Expense Tracker</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit.
-          </p>
-         <a href="www.myste.com">click here</a>
+          <div class="project-container project-card">
+              <img src="./assets/images/expenseTracker.png" alt="" class="project-pic" loading="lazy">
+              <h3 class="project-title">Expense Tracker</h3>
+              <p class="project-details">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, atque?
+              </p>
+              <a href="www.mysite.com" class="project-link"> Check the Expense Tracker project</a>
+          </div>
 
-        </div>
+          <div class="project-container project-card">
+              <img src="./assets/images/netflixClone.png" alt="" class="project-pic" loading="lazy">
+              <h3 class="project-title">Netflix Clone</h3>
+              <p class="project-details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, alias?
+              </p>
+              <a href="www.mysite.com" class="project-link"> Check the Netflix Clone project</a>
+          </div>
 
-        <div class="project-container project-card">
-          <img src="./assets/images/greenyEarth.png" alt=""
-          class="lazy"/>
-          <h3 class="project-title">Green Earth</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit.
-          </p>
-         <a href="www.myste.com">click here</a>
-        </div>
-
-        <div class="project-container project-card">
-          <img src="./assets/images/netflixClone.png" class="project-pic" alt="">
-          <h3 class="project-title">Netflix Clone</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit.
-          </p>
-         <a href="www.myste.com">click here</a>
-
-        </div>
+          <div class="project-container project-card">
+              <img src="./assets/images/greenyEarth.png" alt="" class="project-pic" loading="lazy">
+              <h3 class="project-title">Greeny Earth</h3>
+              <p class="project-details">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, provident.
+              </p>
+              <a href="www.mysite.com" class="project-link"> Check the Greeny Earth project</a>
+          </div>
       </div>
-    </section>
+  </section>
 
-    <section class="contact" id="contact">
-      <h2>Get in touch with me</h2>
-      <div class="contact-form-container">
+
+  <section class="contact" id="contact">
+    <h2>Let's get in touch</h2>
+    <div class="contact-form-container">
         <div class="contact-form">
-          <form action="https://formspree.io/f/xyylngw" method="POST">
+            <form action="https://formspree.io/f/xyylngw" method="Post">
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type="text" name="sender-name" id="name" placeholder="Enter your name" class="input-feild" required>
+                </div>
 
-            <div class="form-control">
-              <label for="email">Email</label>
-              <input type="text" name="sender-name" id="name"
-              placeholder="Enter your name" required>
-            </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="text" name="sender-email" id="email" placeholder="Enter your email" class="input-feild" required>
+                </div>
 
-            <div class="form-control">
-              <label for="email">Email</label>
-              <input type="text" name="sender-name" id="name"
-              placeholder="Enter your name" required>
-            </div>
-
-            <div class="form-control">
-              <label for="message">Message</label>
-              <input type="text" name="sender-email" id="email" placeholder="Enter your email">
-              <textarea name="message" id="message" cols="20" rows="10" class="input-field" required></textarea>
-
-            </div>
-            <input .type="submit" value="Send now".id="submit-btn".class="submit-btn">
-          </form>
+                <div class="form-control">
+                    <label for="messages">Messages</label>
+                    <textarea name="messages" id="name" cols="30" rows="10" class="input-feild" required></textarea>
+                </div> 
+                <input type="submit" value="Send now" id="submit-btn" class="submit-btn">
+            </form>
 
         </div>
+    </div>
 
-      </div>
-
-    </section>
+</section>
 
     <div class="socials">
       <a href="#" target="_blank">
@@ -202,6 +191,37 @@
       <p class="copy">Made with &#x1F49E; <a href="#">by Yesutor Sevor</a>
       </p>
     </footer>
+    <i class="scroll-up" id="scroll-up">
+      <img class="socicon up-arrow" src="./assets/icons/icons8-upward-arrow.gif" alt="scroll-up">
+  </i>
+
+  <script>
+     const scrollUp = document.querySelector("#scroll-up");
+
+scrollUp.addEventListener("click", () =>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behaviour:"smooth"
+    });
+});
+
+const burger=document.querySelector("#burger-menu");
+const ul = document.querySelector("nav ul");
+const nav = document.toggle("show");
+
+burger.addEventListener("click", () =>{
+    ul.classList.toggle("show");
+});
+
+const navlink =document.querySelectorAll(".nav-link");
+
+navlink.forEach(link => {
+    link.addEventListener("click", ()=>{
+        ul.classList.remove("show");
+    })
+})
+  </script>
 
     <script
       type="module"
